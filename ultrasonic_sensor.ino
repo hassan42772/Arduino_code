@@ -15,15 +15,11 @@ void setup() {
   Serial.begin(9600); // Starts the serial communication
 }
 void loop() {
-  
-
+void screen();
+void distances();
 }
 
-
-
-
-
-void distance(){
+void distances(){
   // Clears the trigPin
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
@@ -42,7 +38,7 @@ void distance(){
 }
 
 void screen(){
-    lcd.backlight();
+  lcd.backlight();
   lcd.setCursor(0,0);
   lcd.print("distance:");
   lcd.setCursor(10,0);
